@@ -16,7 +16,10 @@ const StartNewGameButton = () => {
 
   const isDeckSizeZero = () => {
     if (deckSize === 0) {
+      console.log(deckSize);
       setDeckSizeZero(true);
+    } else {
+      setDeckSizeZero(false);
     }
   };
 
