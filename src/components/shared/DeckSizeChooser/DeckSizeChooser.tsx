@@ -13,7 +13,7 @@ const DeckSizeChooser = () => {
   }, [deckSize]);
   return (
     <DeckSizeChoose onChange={setDeckSizeHandler}>
-      <option value="">Deck Size</option>
+      <option value="0">Deck Size</option>
       <option value="4">Deck Size: 4</option>
       <option value="8">Deck Size: 8</option>
       <option value="12">Deck Size: 12</option>
