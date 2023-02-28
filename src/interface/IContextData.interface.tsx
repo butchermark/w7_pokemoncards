@@ -8,6 +8,8 @@ export interface IContextData {
   seed: number;
   usingCards: number;
   firstRound: boolean;
+  isGameOver: boolean;
+  setIsGameOver: React.Dispatch<React.SetStateAction<boolean>>;
   setFirstRound: React.Dispatch<React.SetStateAction<boolean>>;
   setUsingCards: React.Dispatch<React.SetStateAction<number>>;
   setSeed: React.Dispatch<React.SetStateAction<number>>;

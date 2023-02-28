@@ -2,7 +2,7 @@ import DeckSizeChooser from "../shared/DeckSizeChooser/DeckSizeChooser";
 import StartNewGameButton from "../shared/Buttons/StartNewGameButton";
 import { CenteredWrapper, FlexWrapper, PokemonTitle } from "./MainPage.styled";
 import "./MainPage.css";
-import SkipButton from "../shared/Buttons/SkipButton";
+import GameRules from "../shared/GameRules/GameRules";
 
 const MainPage = () => {
   return (
@@ -12,11 +12,12 @@ const MainPage = () => {
           src={require("../cards/assets/backgroundsAndTitles/pokemon-title.png")}
           alt=""
         />
+
         <FlexWrapper>
           <DeckSizeChooser />
           <StartNewGameButton />
         </FlexWrapper>
-        <SkipButton />
+        <GameRules />
       </CenteredWrapper>
     </div>
   );

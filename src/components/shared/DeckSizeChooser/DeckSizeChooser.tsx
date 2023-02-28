@@ -12,7 +12,7 @@ const DeckSizeChooser = () => {
     SaveDeckSize();
   }, [deckSize]);
   return (
-    <DeckSizeChoose disabled={inGameStatus} onChange={setDeckSizeHandler}>
+    <DeckSizeChoose onChange={setDeckSizeHandler}>
       <option value="">Deck Size</option>
       <option value="4">Deck Size: 4</option>
       <option value="8">Deck Size: 8</option>

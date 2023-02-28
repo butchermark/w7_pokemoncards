@@ -13,6 +13,7 @@ export const PokemonCardsProvider = ({ children }: any) => {
   const [matchCounter, setMatchCounter] = useState(1);
   const [turns, setTurns] = useState(0);
   const [firstRound, setFirstRound] = useState(true);
+  const [isGameOver, setIsGameOver] = useState(false);
 
   const SaveDeckSize = () => {
     localStorage.setItem("deckSize", JSON.stringify(deckSize));
@@ -48,6 +49,8 @@ export const PokemonCardsProvider = ({ children }: any) => {
         seed,
         usingCards,
         firstRound,
+        isGameOver,
+        setIsGameOver,
         setFirstRound,
         setUsingCards,
         setSeed,

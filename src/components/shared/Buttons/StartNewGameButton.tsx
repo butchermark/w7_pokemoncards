@@ -6,13 +6,14 @@ const StartNewGameButton = () => {
   const {
     setInGameStatus,
     setNewGame,
-    inGameStatus,
+    setIsGameOver,
     setTurns,
     setMatchCounter,
   } = React.useContext(PokemonCardsContext);
 
   const inGameStatusChangeHandler = () => {
     setInGameStatus(true);
+    setIsGameOver(false);
     setMatchCounter(1);
     setTurns(0);
     setNewGame(Math.random());
@@ -20,7 +21,6 @@ const StartNewGameButton = () => {
   return (
     <Link to={"/pokemoncardgame/game"}>
       <StyledButton
-        disabled={inGameStatus}
         onClick={inGameStatusChangeHandler}
         className="start-new-game-button"
       >

@@ -29,9 +29,8 @@ const PokemonCardsList = () => {
     newGame,
     setTurns,
     checkIfHighScore,
+    setIsGameOver,
     matchCounter,
-    firstRound,
-    inGameStatus,
     setMatchCounter,
     setInGameStatus,
     setFirstRound,
@@ -83,6 +82,7 @@ const PokemonCardsList = () => {
             if (card.src === choiceOne.src) {
               setMatchCounter(matchCounter + 1);
               if (matchCounter === usingCards / 2) {
+                setIsGameOver(true);
                 checkIfHighScore();
                 setFirstRound(false);
                 setInGameStatus(false);

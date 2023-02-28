@@ -1,0 +1,9 @@
+.game-ending-div {
+  display: flex;
+  background-image: url("../../cards/assets/backgroundsAndTitles/background-game.png");
+  color: white;
+  height: 820px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
