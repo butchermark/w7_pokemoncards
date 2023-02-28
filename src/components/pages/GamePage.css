@@ -1,0 +1,11 @@
+.lower-header-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
+}
+.display-scores {
+  color: rgb(255, 220, 0);
+  font-size: 25px;
+}

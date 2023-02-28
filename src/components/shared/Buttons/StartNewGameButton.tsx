@@ -1,22 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PokemonCardsContext from "../../context/PokemonCardsContext";
-
+import PokemonCardsContext from "../../../context/PokemonCardsContext";
+import { StyledButton } from "./StyledButton";
 const StartNewGameButton = () => {
-  const { inGameStatus, setInGameStatus, setDeckSize } =
+  const { setInGameStatus, setNewGame, inGameStatus, setTurns } =
     React.useContext(PokemonCardsContext);
 
   const inGameStatusChangeHandler = () => {
     setInGameStatus(true);
+    setTurns(0);
+    setNewGame(Math.random());
   };
   return (
     <Link to={"/pokemoncardgame/game"}>
-      <button
+      <StyledButton
+        disabled={inGameStatus}
         onClick={inGameStatusChangeHandler}
         className="start-new-game-button"
       >
         Start New Game
-      </button>
+      </StyledButton>
     </Link>
   );
 };
