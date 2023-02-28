@@ -1,5 +1,7 @@
 @font-face {
-  font-family: Bangers;
+  font-family: "Bangers";
+  src: url("./components/cards/assets/fonts/Bangers-Regular.ttf")
+    format("truetype");
 }
 body {
   margin: 0;

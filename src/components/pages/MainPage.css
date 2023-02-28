@@ -1,6 +1,9 @@
 .main-page-div {
   display: flex;
-  padding-top: 25%;
+  height: 820px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("../cards/assets/backgroundsAndTitles/background-start.png");
+  background-size: cover;
 }

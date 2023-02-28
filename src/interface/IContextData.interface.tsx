@@ -7,6 +7,8 @@ export interface IContextData {
   highScore: number;
   seed: number;
   usingCards: number;
+  firstRound: boolean;
+  setFirstRound: React.Dispatch<React.SetStateAction<boolean>>;
   setUsingCards: React.Dispatch<React.SetStateAction<number>>;
   setSeed: React.Dispatch<React.SetStateAction<number>>;
   setHighScore: React.Dispatch<React.SetStateAction<number>>;

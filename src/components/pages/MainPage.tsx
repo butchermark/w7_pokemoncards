@@ -1,16 +1,17 @@
 import DeckSizeChooser from "../shared/DeckSizeChooser/DeckSizeChooser";
-import "./MainPage.css";
 import StartNewGameButton from "../shared/Buttons/StartNewGameButton";
 import { CenteredWrapper, FlexWrapper, PokemonTitle } from "./MainPage.styled";
-import PokemonCardsContext from "../../context/PokemonCardsContext";
-import React from "react";
+import "./MainPage.css";
 import SkipButton from "../shared/Buttons/SkipButton";
 
 const MainPage = () => {
   return (
     <div className="main-page-div">
       <CenteredWrapper>
-        <PokemonTitle src="/assets/pokemon-title.png" alt="" />
+        <PokemonTitle
+          src={require("../cards/assets/backgroundsAndTitles/pokemon-title.png")}
+          alt=""
+        />
         <FlexWrapper>
           <DeckSizeChooser />
           <StartNewGameButton />

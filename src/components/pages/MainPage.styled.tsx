@@ -5,7 +5,6 @@ export const CenteredWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: "url(require('./assets/background-game.png'))";
   background-size: cover;
 `;
 

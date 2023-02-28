@@ -9,3 +9,7 @@
   color: rgb(255, 220, 0);
   font-size: 25px;
 }
+.game-page-div {
+  background-image: url("../cards/assets/backgroundsAndTitles/background-game.png");
+  height: 820px;
+}

@@ -12,6 +12,7 @@ export const PokemonCardsProvider = ({ children }: any) => {
   const [seed, setSeed] = useState(0);
   const [matchCounter, setMatchCounter] = useState(1);
   const [turns, setTurns] = useState(0);
+  const [firstRound, setFirstRound] = useState(true);
 
   const SaveDeckSize = () => {
     localStorage.setItem("deckSize", JSON.stringify(deckSize));
@@ -27,13 +28,13 @@ export const PokemonCardsProvider = ({ children }: any) => {
 
   const checkIfHighScore = () => {
     if (turns < highScore) {
-      setHighScore(turns);
-      localStorage.setItem("highScore", JSON.stringify(turns + 1));
+      setHighScore(turns + 1);
+      localStorage.setItem("highScore", JSON.stringify(turns));
+    } else if (firstRound === true) {
+      setHighScore(turns + 1);
+      localStorage.setItem("highScore", JSON.stringify(turns));
     }
   };
-  useEffect(() => {
-    setHighScore(JSON.parse(localStorage.getItem("highScore") || "0"));
-  }, [turns]);
 
   return (
     <PokemonCardsContext.Provider
@@ -46,6 +47,8 @@ export const PokemonCardsProvider = ({ children }: any) => {
         highScore,
         seed,
         usingCards,
+        firstRound,
+        setFirstRound,
         setUsingCards,
         setSeed,
         setMatchCounter,

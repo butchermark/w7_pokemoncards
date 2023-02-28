@@ -30,8 +30,11 @@ const PokemonCardsList = () => {
     setTurns,
     checkIfHighScore,
     matchCounter,
+    firstRound,
+    inGameStatus,
     setMatchCounter,
     setInGameStatus,
+    setFirstRound,
   } = useContext(PokemonCardsContext);
 
   useEffect(() => {
@@ -78,9 +81,18 @@ const PokemonCardsList = () => {
         setCards((prevCards) => {
           return prevCards.map((card) => {
             if (card.src === choiceOne.src) {
+              console.log(matchCounter);
+              console.log(usingCards);
+              console.log(firstRound);
+              console.log(inGameStatus);
               setMatchCounter(matchCounter + 1);
               if (matchCounter === usingCards / 2) {
+                console.log(matchCounter);
+                console.log(usingCards);
+                console.log(firstRound);
+                console.log(inGameStatus);
                 checkIfHighScore();
+                setFirstRound(false);
                 setInGameStatus(false);
               }
               return { ...card, matched: true };
