@@ -11,5 +11,6 @@
 }
 .game-page-div {
   background-image: url("../cards/assets/backgroundsAndTitles/background-game.png");
-  height: 1000px;
+  height: 100%;
+  min-height: 820px;
 }
