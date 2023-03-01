@@ -114,7 +114,19 @@ const PokemonCardsList = () => {
   return (
     <Grid container spacing={6} justifyContent="center">
       {cards.map((card) => (
-        <Grid key={card.id} item xs={5} sm={3} md={2} lg={3}>
+        <Grid
+          key={card.id}
+          item
+          xs={5}
+          sm={3}
+          md={2}
+          lg={3}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <PokemonCard
             key={card.id}
             card={card}
